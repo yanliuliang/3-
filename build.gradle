@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+//        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+//        maven { url 'https://maven.aliyun.com/repository/google' }
+//        // 华为开源镜像：https://mirrors.huaweicloud.com
+//        maven { url 'https://repo.huaweicloud.com/repository/maven' }
+//        // JitPack 远程仓库：https://jitpack.io
+        maven { url 'https://www.jitpack.io' }
+        // MavenCentral 远程仓库：https://mvnrepository.com
+        mavenCentral()
+        maven { url 'https://repo1.maven.org/maven2/' }
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.1"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+//        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+//        maven { url 'https://maven.aliyun.com/repository/google' }
+//        // 华为开源镜像：https://mirrors.huaweicloud.com
+//        maven { url 'https://repo.huaweicloud.com/repository/maven' }
+        // JitPack 远程仓库：https://jitpack.io
+        maven { url 'https://www.jitpack.io' }
+//        maven { url 'https://repo1.maven.org/maven2/' }
+        // MavenCentral 远程仓库：https://mvnrepository.com
+        mavenCentral()
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

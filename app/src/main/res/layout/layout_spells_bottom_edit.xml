@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.example.mymenudemo.SpellViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:visibility="@{vm.isShow()?View.VISIBLE :View.GONE}">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2A2A34"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="34dp"
+            android:text="已选择"
+            android:textColor="#fff3f3f3"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="@{String.valueOf(vm.tagSize)}"
+            android:textColor="#ff931cc1"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_start"
+            app:layout_constraintStart_toEndOf="@id/tv_start"
+            app:layout_constraintTop_toTopOf="@id/tv_start" />
+
+        <TextView
+            android:id="@+id/tv_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="个Tag"
+            android:textColor="#fff3f3f3"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_second"
+            app:layout_constraintStart_toEndOf="@id/tv_second"
+            app:layout_constraintTop_toTopOf="@id/tv_second" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->vm.clickLoadMoreTag()}"
+            android:padding="7dp"
+            android:src="@drawable/image_close_more"
+            app:layout_constraintBottom_toBottomOf="@id/tv_third"
+            app:layout_constraintStart_toEndOf="@id/tv_third"
+            app:layout_constraintTop_toTopOf="@id/tv_third" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bg_et_al_spell"
+            app:layout_constraintTop_toBottomOf="@id/tv_second" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tag"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginHorizontal="33dp"
+            android:layout_marginTop="17dp"
+            app:layout_constraintEnd_toEndOf="@id/image"
+            app:layout_constraintStart_toStartOf="@id/image"
+            app:layout_constraintTop_toTopOf="@id/image" />
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="12dp"
+            android:text="0/100"
+            android:textColor="#6B6B77"
+            app:layout_constraintBottom_toBottomOf="@id/image"
+            app:layout_constraintEnd_toEndOf="@id/image"
+            app:layout_goneMarginEnd="17dp" />
+
+        <TextView
+            android:id="@+id/tv_clean_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginBottom="9dp"
+            android:drawableLeft="@drawable/icon_clean_all"
+            android:drawablePadding="6dp"
+            android:padding="5dp"
+            android:text="清空文本"
+            android:textColor="#ffe3e2e7"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/image"
+            app:layout_constraintStart_toStartOf="@id/image" />
+
+        <ImageView
+            android:id="@+id/image_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:onClick="@{()->vm.getRandomData()}"
+            android:src="@drawable/bg_edit_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/image_right"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/image_random"
+            android:drawablePadding="6dp"
+            android:text="随机"
+            android:textColor="#fff3f3f3"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/image_left"
+            app:layout_constraintEnd_toEndOf="@id/image_left"
+            app:layout_constraintStart_toStartOf="@id/image_left"
+            app:layout_constraintTop_toTopOf="@id/image_left" />
+
+        <ImageView
+            android:id="@+id/image_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="14dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bg_edit_right"
+            app:layout_constraintBottom_toBottomOf="@id/image_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@id/image_left"
+            app:layout_constraintTop_toTopOf="@id/image_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/image_more"
+            android:drawablePadding="8dp"
+            android:text="前往生成"
+            android:textColor="#fff3f3f3"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/image_right"
+            app:layout_constraintEnd_toEndOf="@id/image_right"
+            app:layout_constraintStart_toStartOf="@id/image_right"
+            app:layout_constraintTop_toTopOf="@id/image_right" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,93 @@
+[
+  {
+    "label": "常用",
+    "list":[
+      {
+        "theme": "图像优化",
+        "parentLabel": 0,
+        "list": [
+          {"typeName": "大师作品", "parentTheme": "图像优化", "parentThemeId": 0, "parentLabel": "常用", "isSelect": false},
+          {"typeName": "最好画质", "parentTheme": "图像优化", "parentThemeId": 0, "parentLabel": "常用", "isSelect": false}
+        ]
+      },
+      {
+        "theme": "镜头视角",
+        "parentLabel": 0,
+        "list": [
+          {"typeName": "景深", "parentTheme": "图像优化", "parentThemeId": 1, "parentLabel": "常用", "isSelect": false},
+          {"typeName": "全景", "parentTheme": "图像优化", "parentThemeId": 1, "parentLabel": "常用", "isSelect": false}
+        ]
+      }
+    ]
+  },
+  {
+    "label": "人物",
+    "list":[
+      {
+        "theme": "人物",
+        "parentLabel": 1,
+        "list": [
+          {"typeName": "女性", "parentTheme": "人物", "parentThemeId": 2, "parentLabel": "人物", "isSelect": false},
+          {"typeName": "男性", "parentTheme": "人物", "parentThemeId": 2, "parentLabel": "人物", "isSelect": false}
+        ]
+      },
+      {
+        "theme": "数量",
+        "parentLabel": 1,
+        "list": [
+          {"typeName": "单人", "parentTheme": "数量", "parentThemeId": 3, "parentLabel": "人物", "isSelect": false},
+          {"typeName": "多个女孩", "parentTheme": "数量", "parentThemeId": 3, "parentLabel": "人物", "isSelect": false}
+        ]
+      }
+    ]},
+  {
+    "label": "角色",
+    "list":[
+      {
+        "theme": "职场",
+        "parentLabel": 2,
+        "list": [
+          {"typeName": "救生员", "parentTheme": "职场", "parentThemeId": 4, "parentLabel": "角色", "isSelect": false},
+          {"typeName": "拳击手", "parentTheme": "职场", "parentThemeId": 4, "parentLabel": "角色", "isSelect": false}
+        ]
+      },
+      {
+        "theme": "动漫",
+        "parentLabel": 2,
+        "list": [
+          {"typeName": "宝可梦", "parentTheme": "动漫", "parentThemeId": 5, "parentLabel": "角色", "isSelect": false},
+          {"typeName": "泰迪熊", "parentTheme": "动漫", "parentThemeId": 5, "parentLabel": "角色", "isSelect": false}
+        ]
+      }, {
+        "theme": "职场2",
+        "parentLabel": 2,
+        "list": [
+          {"typeName": "救生员", "parentTheme": "职场", "parentThemeId": 6, "parentLabel": "角色", "isSelect": false},
+          {"typeName": "拳击手", "parentTheme": "职场", "parentThemeId": 6, "parentLabel": "角色", "isSelect": false}
+        ]
+      },
+      {
+        "theme": "动漫2",
+        "parentLabel": 2,
+        "list": [
+          {"typeName": "宝可梦", "parentTheme": "动漫", "parentThemeId": 7, "parentLabel": "角色", "isSelect": false},
+          {"typeName": "泰迪熊", "parentTheme": "动漫", "parentThemeId": 7, "parentLabel": "角色", "isSelect": false}
+        ]
+      }, {
+        "theme": "职场3",
+        "parentLabel": 2,
+        "list": [
+          {"typeName": "救生员", "parentTheme": "职场", "parentThemeId": 8, "parentLabel": "角色", "isSelect": false},
+          {"typeName": "拳击手", "parentTheme": "职场", "parentThemeId": 8, "parentLabel": "角色", "isSelect": false}
+        ]
+      },
+      {
+        "theme": "动漫3",
+        "parentLabel": 2,
+        "list": [
+          {"typeName": "宝可梦", "parentTheme": "动漫", "parentThemeId": 9, "parentLabel": "角色", "isSelect": false},
+          {"typeName": "泰迪熊", "parentTheme": "动漫", "parentThemeId": 9, "parentLabel": "角色", "isSelect": false}
+        ]
+      }
+    ]}
+]
